@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainFragment">
+
+    <LinearLayout
+        android:id="@+id/main_linearLayout"
+        android:orientation="horizontal"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/menu_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_settings_btn"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:gravity="end"
+            app:icon="@drawable/ic_settings_24"
+            app:iconSize="24dp"
+            app:iconTint="?attr/colorControlNormal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_score_container"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/score_bg"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/coin"
+            app:iconSize="24dp"
+            android:layout_gravity="center" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="3086" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_shape_container"
+        android:layout_width="210dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_container_bg"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/main_linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/main_linearLayout">
+
+        <FrameLayout
+            android:background="@drawable/stripe_bg"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="20dp"/>
+        <FrameLayout
+            android:background="@drawable/stripe_bg"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="20dp"/>
+        <FrameLayout
+            android:background="@drawable/stripe_bg"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="20dp"/>
+        <FrameLayout
+            android:background="@drawable/stripe_bg"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="20dp"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/main_shape_container"
+        app:layout_constraintTop_toBottomOf="@id/main_score_container"
+        android:src="@drawable/present" />
+
+    <LinearLayout
+        android:id="@+id/main_level_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_shape_container"
+        android:layout_marginTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@drawable/shape_container_bg"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEVEL 10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#254684" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/main_africa_iv"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_level_container"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/africa" />
+
+    <FrameLayout
+        android:id="@+id/main_rang_container"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_africa_iv"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SILVER 1"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/main_rang_score"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toStartOf="@id/main_rang_container"
+        app:layout_constraintTop_toBottomOf="@id/main_africa_iv"
+        android:background="@drawable/rang_score_bg"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="39"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_arrow_container"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/main_rang_container"
+        app:layout_constraintTop_toBottomOf="@id/main_africa_iv"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/menu_bg">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/arrow"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main_pvp_container"
+        android:paddingStart="35dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_rang_container"
+        android:background="@drawable/pvp_bg"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PVP"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/swords"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:paddingVertical="10dp"
+        android:layout_marginTop="4dp"
+        android:id="@+id/main_ttp_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_pvp_container"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAP TO PLAY"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_cart_container"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_pvp_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main_pvp_container"
+        android:background="@drawable/pvp_bg">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cart"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_cup_container"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/main_cart_container"
+        app:layout_constraintEnd_toEndOf="@id/main_cart_container"
+        app:layout_constraintBottom_toTopOf="@id/main_cart_container"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/pvp_bg">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cup"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_ad_container"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/pvp_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/main_pvp_container"
+        app:layout_constraintEnd_toStartOf="@+id/main_pvp_container"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ad" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main_units_container"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/units_bg"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/main_ad_container"
+        app:layout_constraintTop_toBottomOf="@+id/main_ttp_container">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/unit"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:textColor="#385FA3"
+                android:includeFontPadding="false"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="units"
+                android:textColor="#8C9194"
+                android:includeFontPadding="false"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_units_per_second_container"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/units_bg"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/main_ad_container"
+        app:layout_constraintTop_toBottomOf="@+id/main_units_container">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/unit_per_second"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.41"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:textColor="#776629"
+                android:includeFontPadding="false"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="units per second"
+                android:textColor="#8C9194"
+                android:includeFontPadding="false"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/start_units_bg"
+        app:layout_constraintEnd_toEndOf="@+id/main_cart_container"
+        app:layout_constraintStart_toEndOf="@id/main_units_container"
+        app:layout_constraintTop_toTopOf="@+id/main_units_container">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_start_units_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="START UNITS"
+            android:textColor="#355CBF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/main_upgrade_cost_container"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/upgrade_coin_bg"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="1665"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="1dp"
+                android:src="@drawable/coin" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/main_coin_upgrade"
+            android:layout_width="100dp"
+            android:layout_height="18dp"
+            android:background="@drawable/upgrade_units_bg"
+            app:layout_constraintEnd_toEndOf="@+id/main_upgrade_cost_container"
+            app:layout_constraintStart_toStartOf="@+id/main_upgrade_cost_container"
+            app:layout_constraintTop_toBottomOf="@id/main_upgrade_cost_container">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="UPGRADE"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/start_units_bg"
+        app:layout_constraintEnd_toEndOf="@+id/main_cart_container"
+        app:layout_constraintStart_toEndOf="@id/main_units_per_second_container"
+        app:layout_constraintTop_toTopOf="@+id/main_units_per_second_container">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_produce_speed_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="PRODUCE SPEED"
+            android:textColor="#CC9543"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/main_free_container"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/free_bg"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="FREE"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/play" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/main_free_upgrade"
+            android:layout_width="100dp"
+            android:layout_height="18dp"
+            android:background="@drawable/free_upgrade_bg"
+            app:layout_constraintEnd_toEndOf="@+id/main_free_container"
+            app:layout_constraintStart_toStartOf="@+id/main_free_container"
+            app:layout_constraintTop_toBottomOf="@id/main_free_container">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="UPGRADE"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
